@@ -1,4 +1,5 @@
 .tips {
+  position: relative;
   margin: 15rem 20% 15rem 20%;
 
   &__article {
@@ -32,6 +33,19 @@
   &__content {
     margin-left: 3rem;
     flex-basis: 50%;
+  }
+
+  &__decor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: "arial", serif;
+    font-weight: bolder;
+    font-size: 25rem;
+    line-height: 0.6;
+    letter-spacing: 1px;
+    color: var(--color-grey-dark);
+    transform: translate(-35%, -55%) rotate(-25deg);
   }
 }
 
