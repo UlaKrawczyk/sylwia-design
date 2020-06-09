@@ -1,0 +1,55 @@
+.reviews {
+  margin-bottom: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  &__slider {
+    flex-basis: 60%;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 1.7rem;
+    font-style: italic;
+    font-weight: normal;
+  }
+  &__person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  &__person-image {
+    width: 9rem;
+    height: 9rem;
+    background-size: cover;
+    border-radius: 50%;
+
+    &--1 {
+      background-image: url(../assets/img/person1.jpg);
+    }
+    &--2 {
+      background-image: url(../assets/img/person2.jpg);
+    }
+    &--3 {
+      background-image: url(../assets/img/person3.jpg);
+      background-position: center;
+    }
+  }
+  &__person-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: 2rem;
+  }
+
+  &__arrow {
+    flex-basis: 20%;
+    text-align: center;
+
+    font-size: 6rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    cursor: pointer;
+  }
+}
