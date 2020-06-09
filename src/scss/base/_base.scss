@@ -1,9 +1,12 @@
 :root {
   --color-primary: #536c59;
-  --color-secondary: #1e152a;
+  // --color-secondary: #1e152a;
+  --color-secondary: #160441;
   --color-grey-dark: #3c3744;
-  --color-grey-light: #daddd8;
-  --color-grey-lighter: #eaece9;
+  // --color-grey-light: #daddd8;
+  --color-grey-light: #e5e7e3;
+  //--color-grey-lighter: #eaece9;
+  --color-grey-lighter: #eff1ee;
 
   --font-primary: "Josefin Slab", serif;
   --font-header: "Fredericka the Great", cursive;
@@ -65,9 +68,9 @@ body {
 main {
   position: relative;
   max-width: 128rem;
-  margin: 0 auto;
+  margin: 2rem auto;
   background-color: var(--color-grey-light);
-  min-height: 200vh;
+  border-radius: 1rem;
 }
 
 ::selection {

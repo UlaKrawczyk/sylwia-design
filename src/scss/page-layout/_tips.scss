@@ -1,0 +1,36 @@
+.tips {
+  margin: 15rem 20% 15rem 20%;
+
+  &__article {
+    display: flex;
+    margin-bottom: 15rem;
+  }
+  &__image {
+    flex-basis: 50%;
+  }
+  &__image-holder {
+    width: 78%;
+    height: 70vh;
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    &--1 {
+      background-image: url(../assets/img/jadalnia.jpg);
+      border-radius: 3rem 0 0 0;
+      box-shadow: var(--shadow-box-big);
+      transform: rotate(-10deg);
+    }
+    &--2 {
+      margin-left: 9rem;
+      background-image: url(../assets/img/lazienka.jpg);
+      border-radius: 0 3rem 0 0;
+      box-shadow: var(--shadow-box-big);
+      transform: rotate(10deg);
+    }
+  }
+
+  &__content {
+    margin-left: 3rem;
+    flex-basis: 50%;
+  }
+}
