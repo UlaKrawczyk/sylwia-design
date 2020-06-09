@@ -34,3 +34,21 @@
     flex-basis: 50%;
   }
 }
+
+.from-left,
+.from-right {
+  opacity: 0;
+  transition: opacity 400ms ease-in, transform 500ms ease-in;
+}
+.from-left {
+  transform: translateX(-70%);
+}
+.from-right {
+  transform: translateX(70%);
+}
+
+.from-left.appear,
+.from-right.appear {
+  opacity: 1;
+  transform: translateX(0);
+}

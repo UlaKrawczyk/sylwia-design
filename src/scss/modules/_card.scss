@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 3rem;
-  padding-top: 5rem;
+  padding-top: 6rem;
   margin-left: 15%;
   margin-right: 15%;
 
@@ -23,7 +23,7 @@
     z-index: 5;
   }
   &__title {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     color: var(--color-primary);
     font-size: 2rem;
     font-weight: bold;
@@ -31,4 +31,13 @@
   &__description {
     margin-top: 1rem;
   }
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 700ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
 }
