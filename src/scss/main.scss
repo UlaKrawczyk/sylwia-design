@@ -1,13 +1,7 @@
 @import "~normalize.css";
 
-@import "_variables";
-@import "modules/hello.scss";
-
-body {
-  background: lightgrey;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
+@import "base/animation";
+@import "base/base";
+@import "modules/buttons";
+@import "page-layout/logo";
+@import "page-layout/header";

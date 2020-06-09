@@ -1,0 +1,76 @@
+:root {
+  --color-primary: #536c59;
+  --color-secondary: #1e152a;
+  --color-grey-dark: #3c3744;
+  --color-grey-light: #daddd8;
+  --color-grey-lighter: #eaece9;
+
+  --font-primary: "Josefin Slab", serif;
+  --font-header: "Fredericka the Great", cursive;
+
+  --shadow-box-big: 0.5rem 1.5rem 2.8rem rgba(68, 70, 85, 0.4); //use
+  --shadow-box-round: 0 0 2rem rgba(68, 70, 85, 0.2);
+  --shadow-icon: 0 0.4rem 0.5rem rgba(68, 70, 85, 0.9);
+  --shadow-button: 0 1rem 2rem rgba(68, 70, 85, 0.2); //use
+  --shadow-button-active: 0 0.5rem 1rem rgba(68, 70, 85, 0.2); //use
+
+  --line-green: 1px solid var(--color-primary);
+  --line-grey: 1px solid var(--color-grey-lighter);
+}
+
+$bp-largest: 78.1em; //1250px
+$bp-large: 68.75em; //1100px
+$bp-large-mobile: 64em; //1024px
+$bp-medium: 56.25em; //900px
+$bp-medium-grid: 52.2em; //835px
+$bp-medium-tablet: 46.875em; //750px
+$bp-small: 41.25em; //660px
+$bp-smallest: 30.94em; //496px
+$bp-tiny-big: 26em; //416px
+$bp-tiny: 23.44em; //375px
+$bp-mini: 20.3em; //325px
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 57%;
+  }
+  @media only screen and (max-width: $bp-large-mobile) {
+    font-size: 52%;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-secondary);
+}
+
+main {
+  position: relative;
+  max-width: 128rem;
+  margin: 0 auto;
+  background-color: var(--color-grey-light);
+  min-height: 200vh;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-grey-lighter);
+}

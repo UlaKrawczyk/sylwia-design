@@ -1,0 +1,40 @@
+.header {
+  position: absolute;
+  right: 0;
+  width: 90%;
+  height: 90vh;
+  border-radius: 25rem 0 0 0;
+  background-color: var(--color-primary);
+  color: var(--color-grey-lighter);
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__content {
+    margin-top: 2rem;
+  }
+
+  &__heading {
+    font-family: var(--font-header);
+    font-size: 8rem;
+    font-weight: normal;
+  }
+  &__span {
+    display: block;
+    line-height: 1.2;
+    font-family: var(--font-primary);
+    font-size: 7rem;
+    font-weight: 600;
+  }
+  &__hero-image {
+    width: 29vw;
+    height: 24vw;
+    background-image: url(../assets/img/salon.jpg);
+    background-size: cover;
+    background-position: 79% center;
+    border-radius: 3rem 0 0 0;
+    box-shadow: var(--shadow-box-big);
+    transform: rotate(10deg);
+  }
+}

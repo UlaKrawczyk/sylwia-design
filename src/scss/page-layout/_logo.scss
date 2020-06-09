@@ -1,0 +1,62 @@
+.logo {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-secondary);
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: var(--font-header);
+    font-size: 3rem;
+    color: var(--color-secondary);
+  }
+  &__circles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+    width: 4rem;
+    height: 4rem;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+    animation: circles 20s ease-in infinite;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      will-change: transform;
+      width: 4rem;
+      height: 4rem;
+      background: rgba(0, 0, 0, 0.06);
+      border-radius: 50%;
+      content: "";
+      display: block;
+      z-index: 1;
+      animation: circles 17s ease-out infinite;
+    }
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      will-change: transform;
+      width: 4rem;
+      height: 4rem;
+      background: rgba(0, 0, 0, 0.06);
+      border-radius: 50%;
+      content: "";
+      display: block;
+      z-index: 1;
+      animation: circles 20s ease-in infinite;
+    }
+  }
+}
