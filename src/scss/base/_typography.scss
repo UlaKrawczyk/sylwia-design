@@ -23,4 +23,21 @@
       font-size: 8rem;
     }
   }
+
+  &--sets {
+    margin-bottom: 8rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 4rem;
+  font-weight: bolder;
+  line-height: 1.2;
+  color: var(--color-primary);
+
+  &--span {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+  }
 }

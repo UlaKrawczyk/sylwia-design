@@ -1,11 +1,13 @@
 import '../scss/main.scss';
+import moment from 'moment';
 
-/* place your code below */
+//moment.js testing
+const startOfDay = moment().startOf('day').fromNow();
+console.log(startOfDay);
 
 //section features fades in and section tips slides in
 const faders = document.querySelectorAll('.fade-in');
 const sliders = document.querySelectorAll('.slide-in');
-
 
 const appearOptions = {
   rootMargin: '0px 0px -100px 0px',

@@ -1,5 +1,12 @@
+.reviews-base {
+  background-color: var(--color-grey-lighter);
+  padding: 3rem 0 8rem 0;
+  margin-bottom: 12rem;
+  border-radius: 25rem 0 25rem 0;
+}
+
 .reviews {
-  margin-bottom: 15rem;
+  //margin-bottom: 15rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
