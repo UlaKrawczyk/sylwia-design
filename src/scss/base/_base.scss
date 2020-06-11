@@ -1,7 +1,7 @@
 :root {
   --color-primary: #536c59;
   --color-secondary: #160441;
-  --color-grey-dark: rgba(188, 204, 193, 0.274);
+  --color-grey-dark: rgba(188, 204, 193, 0.274); //designed
   --color-grey-light: #e5e7e3;
   --color-grey-lighter: #eff1ee;
 
@@ -14,7 +14,7 @@
   --shadow-button: 0 1rem 2rem rgba(68, 70, 85, 0.2); //use
   --shadow-button-active: 0 0.5rem 1rem rgba(68, 70, 85, 0.2); //use
 
-  --line-green: 1px solid var(--color-primary);
+  --line-green: 1px solid var(--color-primary); //hamburger menu
   --line-grey: 1px solid var(--color-grey-lighter);
 }
 

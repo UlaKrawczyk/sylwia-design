@@ -20,7 +20,47 @@
       <p class="logo__text">S.de</p>
     </div>
 
+    <nav class="nav" id="navi">
+      <button id='navi-button' class="nav__hamburger btn-menu" aria-expanded="false" role="button" tabindex="0">
+        <span class="btn-menu__label">open/close menu</span>
+        <span class="btn-menu__burger"></span>
+      </button>
+
+      <div class="nav__menu">
+
+        <div class="nav__person">
+          <img src="../assets/img/architect.jpg" alt="Sylwia photo" class="nav__person-photo">
+          <div class="nav__person-content">
+            <p class="nav__person-text">Sylwia.design</p>
+            <p class="nav__person-text nav__person-text--1">Interior Design Architect</p>
+          </div>
+        </div>
+
+        <ul class="nav__navigation navigation">
+          <li class="navigation__item">
+            <a href="#feat" class="navigation__link">how I work</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#tip" class="navigation__link">tips and tricks</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#rev" class="navigation__link">people say...</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#set" class="navigation__link">chosen sets</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#foot" class="navigation__link">contact me</a>
+          </li>
+          <li class="navigation__item">
+            <a href="aboutMe.html" class="navigation__link">About Me</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <header class="header">
+
       <div class="header__content">
         <h1 class="header__heading">Sylwia.design
           <span class="header__span">better way</span>
@@ -29,9 +69,10 @@
         <a href="#foot" class="button-contact">contact me <span class="button-contact__arrow">&#8594;</span> </a>
       </div>
       <div class="header__hero-image"></div>
+
     </header>
 
-    <section class="features">
+    <section class="features" id="feat">
       <div class="features__circle"></div>
       <h2 class="heading-secondary heading-secondary--features">Main features<br> working with me</h2>
       <div class="cards">
@@ -57,7 +98,7 @@
       </div>
     </section>
 
-    <section class="tips">
+    <section class="tips" id="tip">
       <div class="tips__decor">Des<br>igned</div>
       <article class="tips__article">
         <div class="tips__image slide-in from-left">
@@ -85,7 +126,7 @@
 
     </section>
 
-    <section class="reviews-base">
+    <section class="reviews-base" id="rev">
       <h2 class="heading-secondary heading-secondary--reviews">people say
         <span class="reviews__span">.</span>
         <span class="reviews__span">.</span>
@@ -136,7 +177,7 @@
       </div>
     </section>
 
-    <section class="sets">
+    <section class="sets" id="set">
       <h2 class="heading-secondary heading-secondary--sets">chosen<br>interior design<br>sets</h2>
       <article class="sets__article">
         <div class="sets__image">
@@ -212,7 +253,7 @@
         <h4 class="heading-quaternary">Useful links</h4>
         <ul class="links">
           <li class="links__element"><a href="#" class="links__link">home</a></li>
-          <li class="links__element"><a href="#" class="links__link">about me</a></li>
+          <li class="links__element"><a href="aboutMe.html" class="links__link">about me</a></li>
           <li class="links__element"><a href="#" class="links__link">tips and tricks</a></li>
         </ul>
       </div>

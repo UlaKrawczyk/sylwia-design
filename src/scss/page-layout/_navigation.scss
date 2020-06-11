@@ -1,0 +1,252 @@
+//navigation - main styling
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 20vh;
+
+  margin: 0 auto;
+  z-index: 100;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 1s;
+}
+
+//additional classes to make Hamburger disappear when scrolling down and reappear when scrolling up
+.scroll-down .nav {
+  transform: translateY(-110%);
+}
+.scroll-up .nav {
+  transform: none;
+}
+
+//Hamburger Menu - button styling
+.btn-menu {
+  background-color: transparent;
+  width: 6rem;
+  height: 6rem;
+  margin-right: 3rem;
+  padding-left: 1rem;
+  border: none;
+  outline: none;
+  z-index: 200;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:focus {
+    border: 1px solid var(--color-primary);
+  }
+  &__label {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__burger {
+    position: relative;
+    transition-timing-function: ease-in;
+  }
+
+  &__burger,
+  &__burger::before,
+  &__burger::after {
+    display: inline-block;
+    width: 3rem;
+    height: 0.33rem;
+    background-color: var(--color-grey-lighter);
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  &__burger::before,
+  &__burger::after {
+    content: "";
+    position: absolute;
+    right: 0;
+  }
+  &__burger::before {
+    width: 4rem;
+    transform: translateY(-1rem);
+  }
+  &__burger::after {
+    width: 2rem;
+    transform: translateY(1rem);
+  }
+}
+
+//Hamburger look changing when scrolling down
+.btn-menu_scrolled {
+  background-color: var(--color-grey-light);
+  border: var(--line-green);
+  border-radius: 3px 3px 3px 40%;
+  box-shadow: var(--shadow-button-active);
+}
+.btn-menu_scrolled .btn-menu__burger,
+.btn-menu_scrolled .btn-menu__burger::before,
+.btn-menu_scrolled .btn-menu__burger::after {
+  background-color: var(--color-primary);
+}
+
+//Hamburger 3 lines changing on cross when clicked
+.btn-menu_open {
+  border-radius: 3px 3px 3px 40%;
+  box-shadow: var(--shadow-button-active);
+}
+.btn-menu_open .btn-menu__burger {
+  transform: translateX(-10rem);
+  background-color: transparent;
+}
+.btn-menu_open .btn-menu__burger::before {
+  transform: rotate(45deg) translate(7.2rem, -7.2rem);
+  background-color: var(--color-primary);
+}
+.btn-menu_open .btn-menu__burger::after {
+  width: 4rem;
+  transform: rotate(-45deg) translate(7.2rem, 7.2rem);
+  background-color: var(--color-primary);
+}
+
+.nav {
+  //menu behaviour when in inactive state
+  &__menu {
+    position: absolute;
+    top: 0;
+    right: -80%;
+    width: 40%;
+    height: 100vh;
+    transition: 1s;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    box-shadow: var(--shadow-box-big);
+    background-color: var(--color-grey-light);
+  }
+  //menu behaviour when Hamburger Menu is clicked
+  &__menu_open {
+    right: 0;
+  }
+
+  &__person {
+    flex-basis: 90%;
+    margin-bottom: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__person-photo {
+    width: 11rem;
+    clip-path: circle();
+    margin-left: 2rem;
+    order: 2;
+
+    @media only screen and (max-width: $bp-smallest) {
+      width: 10rem;
+    }
+    @media only screen and (max-width: $bp-tiny) {
+      width: 8rem;
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__person-text {
+    font-size: 2.8rem;
+    font-family: var(--font-header);
+    font-weight: normal;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 2.2rem;
+    }
+    @media only screen and (max-width: $bp-tiny) {
+      font-size: 2.1rem;
+    }
+
+    &--1 {
+      font-family: var(--font-primary);
+      font-size: 2rem;
+      margin-top: 0.2rem;
+
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.4rem;
+      }
+      @media only screen and (max-width: $bp-tiny) {
+        font-size: 1.33rem;
+      }
+    }
+  }
+
+  &__navigation {
+    list-style: none;
+  }
+}
+//when scrolling down with open navigation menu - prevents menu going up
+.scroll-down .nav__menu_open {
+  transform: translateY(22vh);
+}
+
+//navigation - links in menu
+.navigation {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 4px;
+    background-color: var(--color-primary);
+    transform: scaleY(0.1);
+    transition: transform 0.3s ease-out;
+  }
+
+  &__item:hover::before {
+    transform: scaleY(1);
+  }
+
+  &__link,
+  &__link:visited,
+  &__link:link {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    transition: 0.3s;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.8rem;
+    }
+    @media only screen and (max-width: $bp-tiny) {
+      font-size: 1.6rem;
+    }
+  }
+  &__link:hover {
+    color: var(--color-primary);
+    background-color: var(--color-grey-dark);
+  }
+}
