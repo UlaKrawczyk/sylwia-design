@@ -1,8 +1,12 @@
 .features {
   background-color: var(--color-grey-lighter);
   margin-left: 10%;
-
+  padding-bottom: 16rem;
   width: 80%;
-  height: 90vh;
   border-radius: 0 0 50% 50%;
+
+  @media (max-width: $bp-medium-tablet) {
+    border-radius: 0 0 15px 15px;
+    padding-bottom: 8rem;
+  }
 }

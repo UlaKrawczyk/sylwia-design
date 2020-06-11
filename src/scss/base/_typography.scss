@@ -4,6 +4,12 @@
   font-weight: normal;
   text-align: center;
   line-height: 1.2;
+  @media (max-width: $bp-smallest) {
+    font-size: 4rem;
+  }
+  @media (max-width: $bp-tiny) {
+    font-size: 3.5rem;
+  }
 
   &--features {
     padding-top: 7rem;
@@ -14,6 +20,11 @@
     padding-top: 3rem;
     margin-right: 5rem;
     margin-bottom: 3rem;
+
+    @media (orientation: portrait) and (max-width: $bp-medium-grid) {
+      font-size: 4.5rem;
+      margin-right: 0;
+    }
   }
 
   &--reviews {
@@ -35,10 +46,19 @@
   line-height: 1.2;
   color: var(--color-primary);
 
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+
   &--span {
     display: block;
     font-size: 3rem;
     font-weight: bold;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -48,4 +68,9 @@
   font-weight: bold;
   line-height: 1.2;
   color: var(--color-grey-lighter);
+
+  @media (max-width: $bp-medium-tablet) {
+    margin-top: 4rem;
+    font-size: 2.6rem;
+  }
 }

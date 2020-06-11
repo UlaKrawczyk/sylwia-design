@@ -8,17 +8,16 @@
   --font-primary: "Josefin Slab", serif;
   --font-header: "Fredericka the Great", cursive;
 
-  --shadow-box-big: 0.5rem 1.5rem 2.8rem rgba(68, 70, 85, 0.4); //use
-  --shadow-box-round: 0 0 2rem rgba(68, 70, 85, 0.2);
-  --shadow-icon: 0 0.4rem 0.5rem rgba(68, 70, 85, 0.9);
-  --shadow-button: 0 1rem 2rem rgba(68, 70, 85, 0.2); //use
-  --shadow-button-active: 0 0.5rem 1rem rgba(68, 70, 85, 0.2); //use
+  --shadow-box-big: 0.5rem 1.5rem 2.8rem rgba(68, 70, 85, 0.4);
+  --shadow-button: 0 1rem 2rem rgba(68, 70, 85, 0.2);
+  --shadow-button-active: 0 0.5rem 1rem rgba(68, 70, 85, 0.2);
 
-  --line-green: 1px solid var(--color-primary); //hamburger menu
+  --line-green: 1px solid var(--color-primary);
   --line-grey: 1px solid var(--color-grey-lighter);
 }
-
-$bp-largest: 78.1em; //1250px
+$bp-big: 96em; //1536px
+$bp-big-less: 85.3em; //1366px
+$bp-largest: 80em; //1280px
 $bp-large: 68.75em; //1100px
 $bp-large-mobile: 64em; //1024px
 $bp-medium: 56.25em; //900px
@@ -28,7 +27,6 @@ $bp-small: 41.25em; //660px
 $bp-smallest: 30.94em; //496px
 $bp-tiny-big: 26em; //416px
 $bp-tiny: 23.44em; //375px
-$bp-mini: 20.3em; //325px
 
 *,
 *::before,
@@ -68,6 +66,11 @@ main {
   margin: 2rem auto;
   background-color: var(--color-grey-light);
   border-radius: 1rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0 auto;
+    border-radius: 0;
+  }
 }
 
 ::selection {

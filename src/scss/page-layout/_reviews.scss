@@ -3,16 +3,28 @@
   padding: 3rem 0 8rem 0;
   margin-bottom: 12rem;
   border-radius: 25rem 0 25rem 0;
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 4rem 0 7rem 0;
+    margin-bottom: 8rem;
+    border-radius: 20rem 0 20rem 0;
+  }
+  @media only screen and (max-width: $bp-tiny) {
+    border-radius: 15rem 0 15rem 0;
+  }
 }
 
 .reviews {
-  //margin-bottom: 15rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 
   &__slider {
     flex-basis: 60%;
+
+    @media only screen and (max-width: $bp-smallest) {
+      flex-basis: 66%;
+    }
   }
 
   &__text {
@@ -51,12 +63,17 @@
   }
 
   &__arrow {
-    flex-basis: 20%;
+    flex-basis: 22%;
     text-align: center;
 
     font-size: 6rem;
     font-weight: 600;
     color: var(--color-primary);
     cursor: pointer;
+
+    @media only screen and (max-width: $bp-smallest) {
+      flex-basis: 15%;
+      font-size: 5rem;
+    }
   }
 }
