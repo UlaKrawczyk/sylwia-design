@@ -1,11 +1,18 @@
+**If you want to try it out, click here: [Sylwia Design webpage](https://ulakrawczyk.github.io/sylwia-design/)**
+
 ![cover page](github/sylwia-design-web.png)
 
-# Page is based on WTF Webpack Starter Kit 
+### This is a landing page for architect developed to practise my skills:
+* semantic html5
+* css3 with grid and flexbox layout
+* sass
+* js with intersection observer features
+* rwd
 
-## How to use it?
+![mobile view](github/mobile-1.png)
+![mobile view](github/mobile-2.png)
 
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
-
+## Page is based on WTF Webpack Starter Kit 
 ## Available scripts
 
 `npm run start` - runs development mode
