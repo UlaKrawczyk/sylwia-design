@@ -167,6 +167,7 @@ const features = document.querySelector('.features');
 const reviewsBase = document.querySelector('.reviews-base');
 const tips = document.querySelector('.tips');
 const tipsDecor = document.querySelector('.tips__decor');
+const tipsButton = document.querySelectorAll('.button-readMore');
 const sets = document.querySelector('.sets');
 const setsHeading = document.querySelectorAll('.heading-tertiary');
 let isDark = false;
@@ -175,6 +176,7 @@ buttonDark.addEventListener('click', () => {
   if(isDark) { //style w trybie jasnym
     document.body.style.backgroundColor = '#fff';
     main.style.setProperty('background-color', '#e5e7e3');
+    navMenu.style.setProperty('background-color', '#e5e7e3');
     header.style.setProperty('background-color', '#536c59');
     footer.style.setProperty('background-color', '#536c59');
     buttonDark.style.setProperty('background-color', '#536c59');
@@ -182,6 +184,10 @@ buttonDark.addEventListener('click', () => {
     reviewsBase.style.setProperty('background-color', '#eff1ee');
     tips.style.setProperty('color', '#160441');
     tipsDecor.style.setProperty('color', 'rgba(188, 204, 193, 0.274)');
+    tipsButton.forEach(button => {
+      button.style.setProperty('color', '#536c59');
+      button.style.setProperty('border-color', '#536c59');
+    });
     sets.style.setProperty('color', '#160441');
     logo.style.setProperty('border-color', '#160441');
     logoText.style.setProperty('color', '#160441');
@@ -195,6 +201,7 @@ buttonDark.addEventListener('click', () => {
   } else { //style w trybie ciemnym
     document.body.style.backgroundColor = '#536c59';
     main.style.setProperty('background-color', '#536c59');
+    navMenu.style.setProperty('background-color', '#9ab4a0');
     header.style.setProperty('background-color', '#66886e');
     footer.style.setProperty('background-color', '#66886e');
     buttonDark.style.setProperty('background-color', '#66886e');
@@ -202,6 +209,10 @@ buttonDark.addEventListener('click', () => {
     reviewsBase.style.setProperty('background-color', '#9ab4a0');
     tips.style.setProperty('color', '#eff1ee');
     tipsDecor.style.setProperty('color', 'rgba(188, 204, 193, 0.164)');
+    tipsButton.forEach(button => {
+      button.style.setProperty('color', '#eff1ee');
+      button.style.setProperty('border-color', '#eff1ee');
+    });
     sets.style.setProperty('color', '#eff1ee');
     logoText.style.setProperty('color', '#eff1ee');
     logo.style.setProperty('border-color', '#eff1ee');
