@@ -1,8 +1,6 @@
-![cover](https://cotenfrontend.pl/img/cover.png)
+![cover page](github/sylwia-design-web.png)
 
-# WTF Webpack Starter Kit 
-
-Simple toolkit for your static websites development.
+# Page is based on WTF Webpack Starter Kit 
 
 ## How to use it?
 
