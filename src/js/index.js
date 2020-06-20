@@ -153,3 +153,64 @@ for (let i = 0; i < navLinks.length; i++) {
     navHamburger.setAttribute('aria-expanded', 'false');
   });
 }
+
+//DARK MODE:
+
+//dark-mode switch
+const buttonDark = document.querySelector('.dark-mode');
+const main = document.querySelector('main');
+const logo = document.querySelector('.logo');
+const logoText = document.querySelector('.logo__text');
+const header = document.querySelector('header');
+const footer = document.querySelector('footer');
+const features = document.querySelector('.features');
+const reviewsBase = document.querySelector('.reviews-base');
+const tips = document.querySelector('.tips');
+const tipsDecor = document.querySelector('.tips__decor');
+const sets = document.querySelector('.sets');
+const setsHeading = document.querySelectorAll('.heading-tertiary');
+let isDark = false;
+
+buttonDark.addEventListener('click', () => {
+  if(isDark) { //style w trybie jasnym
+    document.body.style.backgroundColor = '#fff';
+    main.style.setProperty('background-color', '#e5e7e3');
+    header.style.setProperty('background-color', '#536c59');
+    footer.style.setProperty('background-color', '#536c59');
+    buttonDark.style.setProperty('background-color', '#536c59');
+    features.style.setProperty('background-color', '#eff1ee');
+    reviewsBase.style.setProperty('background-color', '#eff1ee');
+    tips.style.setProperty('color', '#160441');
+    tipsDecor.style.setProperty('color', 'rgba(188, 204, 193, 0.274)');
+    sets.style.setProperty('color', '#160441');
+    logo.style.setProperty('border-color', '#160441');
+    logoText.style.setProperty('color', '#160441');
+    setsHeading.forEach(heading => {
+      heading.style.setProperty('color', '#536c59');
+    });  
+
+    buttonDark.innerHTML = `dark mode`;
+    isDark = false;
+
+  } else { //style w trybie ciemnym
+    document.body.style.backgroundColor = '#536c59';
+    main.style.setProperty('background-color', '#536c59');
+    header.style.setProperty('background-color', '#66886e');
+    footer.style.setProperty('background-color', '#66886e');
+    buttonDark.style.setProperty('background-color', '#66886e');
+    features.style.setProperty('background-color', '#9ab4a0');
+    reviewsBase.style.setProperty('background-color', '#9ab4a0');
+    tips.style.setProperty('color', '#eff1ee');
+    tipsDecor.style.setProperty('color', 'rgba(188, 204, 193, 0.164)');
+    sets.style.setProperty('color', '#eff1ee');
+    logoText.style.setProperty('color', '#eff1ee');
+    logo.style.setProperty('border-color', '#eff1ee');
+    setsHeading.forEach(heading => {
+      heading.style.setProperty('color', '#eff1ee');
+    });  
+    
+    buttonDark.innerHTML = `light mode`;
+    isDark = true;
+  }
+});
+

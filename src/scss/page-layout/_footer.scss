@@ -28,10 +28,18 @@
   &__link,
   &__link:link,
   &__link:visited {
+    display: block;
     font-size: 2rem;
     line-height: 1.8;
     text-decoration: none;
     color: var(--color-grey-lighter);
+    border-radius: 4px;
+    outline: none;
+
+    &:focus {
+      border: var(--line-outline);
+      box-shadow: var(--shadow-button);
+    }
   }
 }
 
@@ -52,7 +60,14 @@
   }
 
   &__icon {
+    display: inline-block;
     margin-right: 1.5rem;
+    outline: none;
+
+    &:focus {
+      border: var(--line-outline);
+    }
+
     @media (max-width: $bp-medium-tablet) {
       margin: 2rem 0 0 0;
     }
