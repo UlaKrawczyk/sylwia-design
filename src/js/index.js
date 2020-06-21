@@ -1,9 +1,13 @@
 import '../scss/main.scss';
 import moment from 'moment';
-
 //moment.js testing
 const startOfDay = moment().startOf('day').fromNow();
 console.log(startOfDay);
+
+
+const testFileJs = document.querySelector('.header__heading');
+if(testFileJs) {
+  console.log('plik index.js może działać');
 
 //section features fades in and section tips slides in
 const faders = document.querySelectorAll('.fade-in');
@@ -65,7 +69,6 @@ function slideRight() {
   dots[current + 1].style.color = '#536c59';
   current++;
 }
-
 arrowLeft.addEventListener('click', function() {
   if(current === 0) {
     current = sliderImages.length;
@@ -155,7 +158,6 @@ for (let i = 0; i < navLinks.length; i++) {
 }
 
 //DARK MODE:
-
 //dark-mode switch
 const buttonDark = document.querySelector('.dark-mode');
 const main = document.querySelector('main');
@@ -194,10 +196,9 @@ buttonDark.addEventListener('click', () => {
     setsHeading.forEach(heading => {
       heading.style.setProperty('color', '#536c59');
     });  
-
     buttonDark.innerHTML = `dark mode`;
     isDark = false;
-
+    
   } else { //style w trybie ciemnym
     document.body.style.backgroundColor = '#536c59';
     main.style.setProperty('background-color', '#536c59');
@@ -224,4 +225,8 @@ buttonDark.addEventListener('click', () => {
     isDark = true;
   }
 });
+}
+
+
+
 
