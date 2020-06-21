@@ -22,6 +22,10 @@
     padding: 0 5rem;
   }
 
+  &---aboutMe {
+    min-height: 100vh;
+  }
+
   &__heading {
     font-family: var(--font-header);
     font-size: 8rem;
