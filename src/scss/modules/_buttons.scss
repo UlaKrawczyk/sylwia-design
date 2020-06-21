@@ -4,7 +4,7 @@
   display: inline-block;
   text-decoration: none;
   border: var(--line-grey);
-  width: 16.6rem;
+  min-width: 16.6rem;
   padding: 0.8rem 2.2rem;
   font-size: 2rem;
   color: var(--color-grey-lighter);
@@ -23,7 +23,14 @@
     box-shadow: var(--shadow-button);
   }
   @media only screen and (max-width: $bp-medium-grid) {
-    width: 16.8rem;
+    min-width: 16.8rem;
+  }
+}
+
+.button-contact--aboutMe {
+  margin-top: 2rem;
+  @media only screen and (max-width: $bp-small) {
+    margin-top: 1.2rem;
   }
 }
 

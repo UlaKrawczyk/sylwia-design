@@ -1,0 +1,95 @@
+.header-aboutMe {
+  margin-left: 10%;
+  width: 90%;
+  min-height: calc(100vh - 4rem);
+  padding: 5rem 7rem 2rem 7rem;
+  border-radius: 25rem 1rem 0 0;
+  background-color: var(--color-primary);
+  color: var(--color-grey-lighter);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-largest) {
+    border-radius: 25rem 0 0 0;
+    min-height: 100vh;
+  }
+  @media (orientation: portrait) and (max-width: $bp-large), (max-width: $bp-medium-grid) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem 5rem 2rem 5rem;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    align-items: flex-end;
+    text-align: right;
+    padding: 4rem 4rem 2rem 4rem;
+  }
+  @media only screen and (max-width: $bp-tiny) {
+    padding: 4rem 3rem 2rem 3rem;
+  }
+
+  &__content {
+    flex: 0 0 55%;
+    @media (orientation: portrait) and (max-width: $bp-large), (max-width: $bp-medium-grid) {
+      flex: none;
+    }
+  }
+
+  &__paragraph {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__heading {
+    font-family: var(--font-header);
+    font-size: 8rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 7rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 6rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 5rem;
+    }
+    @media only screen and (max-width: $bp-tiny-big) {
+      font-size: 4rem;
+    }
+  }
+
+  &__hero-image {
+    flex: 1;
+    width: 23vw;
+    height: 22vw;
+    margin-left: 2rem;
+    background-image: url(../assets/img/architect.jpg);
+    background-size: cover;
+    background-position: 79% center;
+    border-radius: 3rem 0 0 0;
+    box-shadow: var(--shadow-box-big);
+    transform: rotate(10deg);
+
+    @media (orientation: portrait) and (max-width: $bp-large), (max-width: $bp-medium-grid) {
+      flex: none;
+      width: 50vw;
+      height: 50vw;
+      transform: rotate(0);
+      margin-left: 0;
+      margin-top: 6rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      width: 55vw;
+      height: 38vw;
+      margin-top: 4rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      width: 60vw;
+      height: 28vw;
+      margin-top: 3rem;
+    }
+  }
+}
