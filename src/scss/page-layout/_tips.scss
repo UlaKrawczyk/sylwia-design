@@ -43,11 +43,15 @@
     }
 
     &--1 {
-      background-image: url(../assets/img/jadalnia.jpg);
+      background-image: url(../assets/img/jadalnia-small.jpg);
       border-radius: 3rem 0 0 0;
       box-shadow: var(--shadow-box-big);
       transform: rotate(-10deg);
 
+      @media only screen and (min-resolution: 192dpi) and (min-width: $bp-smallest),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $bp-smallest) {
+        background-image: url(../assets/img/jadalnia.jpg);
+      }
       @media only screen and (max-width: $bp-smallest) {
         transform: rotate(0);
         margin-top: 4rem;
@@ -55,10 +59,15 @@
     }
     &--2 {
       margin-left: 9rem;
-      background-image: url(../assets/img/lazienka.jpg);
+      background-image: url(../assets/img/lazienka-small.jpg);
       border-radius: 0 3rem 0 0;
       box-shadow: var(--shadow-box-big);
       transform: rotate(10deg);
+
+      @media only screen and (min-resolution: 192dpi) and (min-width: $bp-smallest),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $bp-smallest) {
+        background-image: url(../assets/img/lazienka.jpg);
+      }
       @media (orientation: portrait) and (max-width: $bp-large-mobile) {
         margin-left: 5rem;
       }

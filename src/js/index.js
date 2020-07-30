@@ -225,8 +225,7 @@ buttonDark.addEventListener('click', () => {
     isDark = true;
   }
 });
+
 }
-
-
 
 

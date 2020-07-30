@@ -65,10 +65,9 @@
     box-shadow: var(--shadow-box-big);
     transform: rotate(10deg);
 
-    @media only screen and (min-resolution: 192dpi) and (min-width: 600px),
-      only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px),
-      only screen and (min-width: 600px) {
-      background-image: url("../assets/img/salon-small.jpg");
+    @media only screen and (min-resolution: 192dpi) and (min-width: $bp-smallest),
+      only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $bp-smallest) {
+      background-image: url(../assets/img/salon.jpg);
     }
     @media only screen and (max-width: $bp-big-less) {
       width: 28vw;
