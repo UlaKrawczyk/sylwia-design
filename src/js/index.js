@@ -1,9 +1,4 @@
 import '../scss/main.scss';
-import moment from 'moment';
-//moment.js testing
-const startOfDay = moment().startOf('day').fromNow();
-console.log(startOfDay);
-
 
 const testFileJs = document.querySelector('.header__heading');
 if(testFileJs) {
@@ -175,7 +170,7 @@ const setsHeading = document.querySelectorAll('.heading-tertiary');
 let isDark = false;
 
 buttonDark.addEventListener('click', () => {
-  if(isDark) { //style w trybie jasnym
+  if(isDark) { //styles in light mode
     document.body.style.backgroundColor = '#fff';
     main.style.setProperty('background-color', '#e5e7e3');
     navMenu.style.setProperty('background-color', '#e5e7e3');
@@ -199,7 +194,7 @@ buttonDark.addEventListener('click', () => {
     buttonDark.innerHTML = `dark mode`;
     isDark = false;
     
-  } else { //style w trybie ciemnym
+  } else { //styles in dark mode
     document.body.style.backgroundColor = '#536c59';
     main.style.setProperty('background-color', '#536c59');
     navMenu.style.setProperty('background-color', '#9ab4a0');
