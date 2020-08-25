@@ -2,7 +2,6 @@ import '../scss/main.scss';
 
 const testFileJs = document.querySelector('.header__heading');
 if(testFileJs) {
-  console.log('plik index.js może działać');
 
 //section features fades in and section tips slides in
 const faders = document.querySelectorAll('.fade-in');

@@ -26,9 +26,25 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: "html-loader",
+        options: {
+          attributes: {
+            list: [
+              {
+                tag: "img",
+                attribute: "src",
+                type: "src",
+              },
+              // {
+              //   tag: "source",
+              //   attribute: "srcset",
+              //   type: "src",
+              // },
+            ],
+          },
+        },
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|webp|svg)$/i,
         use: [
           {
             loader: "file-loader",
